@@ -80,7 +80,7 @@ prediction = max(set(labels), key=labels.count)
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
-# 🎨 Better modern colors (high contrast on dark)
+# Better modern colors (high contrast on dark)
 colors = {
     0: '#4cc9f0',   # cyan
     1: '#f72585',   # pink
@@ -127,7 +127,7 @@ ax.set_xlabel("Feature 1")
 ax.set_ylabel("Feature 2")
 ax.set_zlabel("Feature 3")
 
-# 🔥 Move legend OUTSIDE
+# Move legend OUTSIDE
 ax.legend(
     loc='upper left',
     bbox_to_anchor=(1.05, 1),
