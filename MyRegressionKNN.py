@@ -32,7 +32,7 @@ class MyRegressionKNN:
 
             k_sorted = sorted(distances_targets, key=lambda x: x[0])[:self.k]
 
-            # 🔥 MAIN CHANGE → mean instead of voting
+            # MAIN CHANGE → mean instead of voting
             targets = [target for _, target in k_sorted]
             prediction = np.mean(targets)
 
@@ -51,7 +51,7 @@ X = np.array([
     [5, 2, 3], [6, 3, 4], [7, 2, 5]
 ])
 
-# 🔥 continuous targets (NOT classes anymore)
+# continuous targets (NOT classes anymore)
 y = np.array([10, 12, 11, 30, 35, 32, 20, 22, 25])
 
 new_point = np.array([[5, 4, 4]])
@@ -80,7 +80,7 @@ neighbors = distances[:k]
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
-# 🎨 Use color map (continuous!)
+# Use color map (continuous!)
 scatter = ax.scatter(
     X[:, 0], X[:, 1], X[:, 2],
     c=y,
@@ -88,7 +88,7 @@ scatter = ax.scatter(
     s=50
 )
 
-# 🔥 prediction point
+# prediction point
 ax.scatter(
     new_point[0][0], new_point[0][1], new_point[0][2],
     color='white',
@@ -116,7 +116,7 @@ ax.set_xlabel("Feature 1")
 ax.set_ylabel("Feature 2")
 ax.set_zlabel("Feature 3")
 
-# 🔥 color bar (important for regression)
+# color bar (important for regression)
 cbar = plt.colorbar(scatter)
 cbar.set_label("Target Value")
 
