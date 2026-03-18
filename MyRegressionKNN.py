@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-plt.style.use('dark_background')
 
 
 class MyRegressionKNN:
@@ -77,6 +76,9 @@ neighbors = distances[:k]
 # =========================
 # PLOT
 # =========================
+
+plt.style.use('dark_background')
+
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
